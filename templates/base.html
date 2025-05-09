@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Product Publication Site{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>Product Publication Site</header>
+    <nav>
+        <a href="{% url 'dashboard' %}">Home</a>
+        <a href="{% url 'product_create' %}">Add Product</a>
+        <a href="{% url 'product_list' %}">Product List</a>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

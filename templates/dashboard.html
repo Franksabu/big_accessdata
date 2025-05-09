@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Dashboard - Product Publication Site{% endblock %}
+
+{% block content %}
+<div class="dashboard-background">
+    <div class="dashboard-content">
+        <h1 style="text-align: center;">Welcome to the Dashboard</h1>
+
+        <section class="motivating-images">
+            <h2>Motivating Product Images</h2>
+            <div class="image-gallery three-columns">
+                <div class="image-item">
+                    <img src="{% static 'images/image6.jpg' %}" alt="Motivating Product 1">
+                    <div class="caption">Inspiration</div>
+                </div>
+                <div class="image-item">
+                    <img src="{% static 'images/image7.jpg' %}" alt="Motivating Product 2">
+                    <div class="caption">Creativity</div>
+                </div>
+                <div class="image-item">
+                    <img src="{% static 'images/image1.jpg' %}" alt="Motivating Product 3">
+                    <div class="caption">Innovation</div>
+                </div>
+                <div class="image-item">
+                    <img src="{% static 'images/image2.jpg' %}" alt="Motivating Product 4">
+                    <div class="caption">Passion</div>
+                </div>
+                <div class="image-item">
+                    <img src="{% static 'images/image3.jpg' %}" alt="Motivating Product 5">
+                    <div class="caption">Energy</div>
+                </div>
+                <div class="image-item">
+                    <img src="{% static 'images/image4.jpg' %}" alt="Motivating Product 6">
+                    <div class="caption">Focus</div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}

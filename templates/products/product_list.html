@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Product List - Product Publication Site{% endblock %}
+
+{% block content %}
+<h1>Products for Sale</h1>
+<div class="product-list">
+    {% for product in products %}
+    <div class="product-item" style="position: relative;">
+        <form method="post" action="{% url 'product_delete' product.pk %}" style="position: absolute; top: 1px; right: 1px;">
+            {% csrf_token %}
+            <button type="submit" style="background: none; border: none; color: red; font-weight: bold; font-size: 14px; cursor: pointer; padding: 0; line-height: 1;">&times;</button>
+        </form>
+        <strong>{{ product.name }}</strong>
+        <div class="product-price">${{ product.price }}</div>
+        {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+          {% comment %}  <small>Image URL: {{ product.image.url }}</small> {% endcomment %} 
+        {% else %}
+            <small>No image uploaded</small>
+        {% endif %}
+        <div class="product-description">{{ product.description }}</div>
+    </div>
+    {% empty %}
+    <p>No products available.</p>
+    {% endfor %}
+</div>
+{% endblock %}
