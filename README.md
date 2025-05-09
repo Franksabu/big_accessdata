@@ -23,3 +23,4 @@ L'image Docker résultante est automatiquement poussée sur Docker Hub après ch
 Pour contribuer, veuillez faire un fork du projet et soumettre une pull request.
 
 git pull https://github.com/Franksabu/big_accessdata.git
+git clone https://github.com/Franksabu/big_accessdata.git
